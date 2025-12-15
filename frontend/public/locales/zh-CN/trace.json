@@ -1,0 +1,11 @@
+{
+	"options_menu": {
+		"options": "选项",
+		"format": "格式",
+		"raw": "原始",
+		"default": "默认",
+		"column": "列",
+		"maxLines": "每行最大行数",
+		"addColumn": "添加列"
+	}
+}

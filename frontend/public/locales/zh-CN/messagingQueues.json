@@ -1,0 +1,24 @@
+{
+	"metricGraphCategory": {
+		"brokerMetrics": {
+			"title": "代理指标",
+			"description": "此处的 Kafka 代理指标通过不干净的主选举和网络吞吐反映数据丢失/延迟情况，并通过请求清理队列与超时指标反映请求失败。"
+		},
+		"consumerMetrics": {
+			"title": "消费者指标",
+			"description": "Kafka 消费者指标提供消息生产与消费之间的滞后、消息传递的成功率与延迟，以及消费数据量等洞察。"
+		},
+		"producerMetrics": {
+			"title": "生产者指标",
+			"description": "Kafka 生产者向代理发送消息以按主题存储与分发。这些指标告知发送的数据量与速率，以及消息投递的成功率。"
+		},
+		"brokerJVMMetrics": {
+			"title": "代理 JVM 指标",
+			"description": "Kafka 代理是 Java 应用，会暴露 JVM 指标以反映系统健康状况。如下的垃圾回收指标提供关于可用内存、代理性能和堆大小的关键洞察。需要启用 new_gc_metrics 才能显示该部分。"
+		},
+		"partitionMetrics": {
+			"title": "分区指标",
+			"description": "Kafka 分区是并行的基本单位。这些指标提供每个主题的分区数量、各分区的当前偏移量、最旧偏移量，以及同步副本数量。"
+		}
+	}
+}

@@ -1,0 +1,8 @@
+{
+	"containers_visualization_message": "容器可视化功能正在积极开发中，很快就会提供给您。",
+	"processes_visualization_message": "进程可视化功能正在积极开发中，很快就会提供给您。",
+	"working_message": "我们正在扩展基础设施监控以覆盖更多场景。感谢您的耐心等待。",
+	"waitlist_message": "加入候补列表以抢先体验。",
+	"waitlist_success_message": "我们已收到您的抢先体验请求。功能上线后会尽快与您联系。",
+	"contact_support": "联系支持"
+}

@@ -1,0 +1,22 @@
+{
+	"trialPlanExpired": "试用计划已到期",
+	"gotQuestions": "有问题？",
+	"contactUs": "联系我们",
+	"upgradeToContinue": "升级以继续",
+	"upgradeNow": "立即升级以继续享受您一直使用的所有功能。",
+	"yourDataIsSafe": "您的数据在此之前都会安全保存",
+	"actNow": "立即行动以避免任何中断，并继续之前的进度。",
+	"contactAdmin": "请联系管理员以完成升级。",
+	"continueMyJourney": "继续我的旅程",
+	"needMoreTime": "需要更多时间？",
+	"extendTrial": "延长试用",
+	"extendTrialMsgPart1": "如果您有明确原因未能在试用期内完成 PoC，请发送邮件至",
+	"extendTrialMsgPart2": "并说明原因。某些情况下我们可以按个案延长试用几天",
+	"whyChooseSignoz": "为何选择 SigNoz",
+	"enterpriseGradeObservability": "企业级可观测性",
+	"observabilityDescription": "在任何规模下获取可观测性，具备先进的安全与合规能力。",
+	"continueToUpgrade": "继续升级",
+	"youAreInGoodCompany": "值得信赖的伙伴遍布全球",
+	"faqs": "常见问题",
+	"somethingWentWrong": "出现了一些问题"
+}

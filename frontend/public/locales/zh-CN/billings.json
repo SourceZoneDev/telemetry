@@ -1,0 +1,16 @@
+{
+	"days_remaining": "计费周期剩余天数。",
+	"billing": "计费",
+	"manage_billing_and_costs": "管理您的计费信息、发票，并监控成本。",
+	"enterprise_cloud": "企业云",
+	"teams_cloud": "团队云",
+	"enterprise": "企业版",
+	"teams": "团队版",
+	"card_details_recieved_and_billing_info": "我们已收到您的卡片信息，您的计费仅会在试用期结束后开始。",
+	"upgrade_plan": "升级套餐",
+	"manage_billing": "管理计费",
+	"upgrade_now_text": "立即升级以保持不间断访问",
+	"billing_start_info": "您的计费仅会在试用期结束后开始",
+	"checkout_plans": "查看付费套餐中的功能",
+	"here": "这里"
+}

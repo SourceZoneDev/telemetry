@@ -1,0 +1,4 @@
+{
+    "name_of_the_view": "视图名称",
+    "delete_confirm_message": "确定要删除 {{viewName}} 视图吗？删除操作不可逆，无法撤销。"
+}
