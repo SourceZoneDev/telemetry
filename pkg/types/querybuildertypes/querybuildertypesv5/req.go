@@ -218,13 +218,13 @@ func (r *QueryRangeRequest) StepIntervalForQuery(name string) int64 {
 	for _, query := range r.CompositeQuery.Queries {
 		switch spec := query.Spec.(type) {
 		case QueryBuilderQuery[TraceAggregation]:
-			stepsMap[spec.Name] = int64(spec.StepInterval.Seconds())
+			stepsMap[spec.Name] = spec.StepInterval.Milliseconds()
 		case QueryBuilderQuery[LogAggregation]:
-			stepsMap[spec.Name] = int64(spec.StepInterval.Seconds())
+			stepsMap[spec.Name] = spec.StepInterval.Milliseconds()
 		case QueryBuilderQuery[MetricAggregation]:
-			stepsMap[spec.Name] = int64(spec.StepInterval.Seconds())
+			stepsMap[spec.Name] = spec.StepInterval.Milliseconds()
 		case PromQuery:
-			stepsMap[spec.Name] = int64(spec.Step.Seconds())
+			stepsMap[spec.Name] = spec.Step.Milliseconds()
 		}
 	}
 
@@ -274,6 +274,31 @@ func (r *QueryRangeRequest) NumAggregationForQuery(name string) int64 {
 		}
 	}
 	return int64(numAgg)
+}
+
+// HasOrderSpecified returns true if any query has an explicit order provided.
+func (r *QueryRangeRequest) HasOrderSpecified() bool {
+	for _, query := range r.CompositeQuery.Queries {
+		switch spec := query.Spec.(type) {
+		case QueryBuilderQuery[TraceAggregation]:
+			if len(spec.Order) > 0 {
+				return true
+			}
+		case QueryBuilderQuery[LogAggregation]:
+			if len(spec.Order) > 0 {
+				return true
+			}
+		case QueryBuilderQuery[MetricAggregation]:
+			if len(spec.Order) > 0 {
+				return true
+			}
+		case QueryBuilderFormula:
+			if len(spec.Order) > 0 {
+				return true
+			}
+		}
+	}
+	return false
 }
 
 func (r *QueryRangeRequest) FuncsForQuery(name string) []Function {

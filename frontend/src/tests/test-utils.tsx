@@ -29,6 +29,20 @@ import { QueryBuilderContextType } from 'types/common/queryBuilder';
 import { ROLES, USER_ROLES } from 'types/roles';
 // import { MemoryRouter as V5MemoryRouter } from 'react-router-dom-v5-compat';
 
+// Mock ResizeObserver
+class ResizeObserverMock {
+	// eslint-disable-next-line class-methods-use-this
+	observe(): void {}
+
+	// eslint-disable-next-line class-methods-use-this
+	unobserve(): void {}
+
+	// eslint-disable-next-line class-methods-use-this
+	disconnect(): void {}
+}
+
+global.ResizeObserver = (ResizeObserverMock as unknown) as typeof ResizeObserver;
+
 const queryClient = new QueryClient({
 	defaultOptions: {
 		queries: {
@@ -330,6 +344,8 @@ const customRender = (
 	});
 };
 
+// eslint-disable-next-line import/export -- re-exporting custom render alongside @testing-library/react
 export * from '@testing-library/react';
 export { default as userEvent } from '@testing-library/user-event';
+// eslint-disable-next-line import/export -- custom render wraps the original
 export { customRender as render };
