@@ -1,8 +1,8 @@
+import { useCallback, useMemo } from 'react';
 import OverlayScrollbar from 'components/OverlayScrollbar/OverlayScrollbar';
 import { ArrowLeft, Plus, Settings, X } from 'lucide-react';
 import ContextMenu from 'periscope/components/ContextMenu';
 import { useDashboard } from 'providers/Dashboard/Dashboard';
-import { useCallback, useMemo } from 'react';
 import { IDashboardVariable } from 'types/api/dashboard/getAll';
 // import { PANEL_TYPES } from 'constants/queryBuilder';
 import { Query } from 'types/api/queryBuilder/queryBuilderData';
@@ -17,7 +17,6 @@ interface UseBaseAggregateOptionsProps {
 	query?: Query;
 	// panelType?: PANEL_TYPES;
 	aggregateData?: AggregateData | null;
-	widgetId?: string;
 	onClose: () => void;
 }
 
@@ -27,7 +26,6 @@ const useDashboardVarConfig = ({
 	query,
 	// panelType,
 	aggregateData,
-	widgetId,
 	onClose,
 }: UseBaseAggregateOptionsProps): {
 	dashbaordVariablesConfig: {
