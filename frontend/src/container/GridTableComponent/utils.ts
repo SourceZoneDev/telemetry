@@ -1,5 +1,4 @@
-/* eslint-disable sonarjs/cognitive-complexity */
-import { ColumnType } from 'antd/es/table';
+import { TableColumnType as ColumnType } from 'antd';
 import { convertUnit } from 'container/NewWidget/RightContainer/dataFormatCategories';
 import { ThresholdProps } from 'container/NewWidget/RightContainer/Threshold/types';
 import { QUERY_TABLE_CONFIG } from 'container/QueryTable/config';
