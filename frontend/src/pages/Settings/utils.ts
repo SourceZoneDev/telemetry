@@ -11,6 +11,7 @@ import {
 	generalSettings,
 	ingestionSettings,
 	keyboardShortcuts,
+	membersSettings,
 	multiIngestionSettings,
 	mySettings,
 	organizationSettings,
@@ -35,6 +36,7 @@ export const getRoutes = (
 	if (isWorkspaceBlocked && isAdmin) {
 		settings.push(
 			...organizationSettings(t),
+			...membersSettings(t),
 			...mySettings(t),
 			...billingSettings(t),
 			...keyboardShortcuts(t),
@@ -60,7 +62,7 @@ export const getRoutes = (
 	settings.push(...alertChannels(t));
 
 	if (isAdmin) {
-		settings.push(...apiKeys(t));
+		settings.push(...apiKeys(t), ...membersSettings(t));
 	}
 
 	// todo: Sagar - check the condition for role list and details page, to whom we want to serve
